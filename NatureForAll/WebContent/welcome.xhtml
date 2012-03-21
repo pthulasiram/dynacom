@@ -1,28 +1,56 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="fr"
-      xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:c="http://java.sun.com/jsp/jstl/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <ui:composition template="/templates/main.xhtml">
-    <ui:define name="body">
-        <p><h3>Le Jardin d'Afna,</h3> sp&#233;cialiste de l'huile d'argan et du savon noir :
-Sp&#233;cialiste de la vente d'huiles d'argan et de savons noirs, Le Jardin d'Afna vous propose des produits de beaut&#233; et de bien être sains et entièrement naturels conçus dans le respect des traditions dont les bienfaits sont reconnus depuis des siècles.</p>
-<img align="right" src="images/pierres-fleurs.jpg" alt="Hamman pierres et fleures"/>
-<p>L'huile d'argan, un produit naturel pour l'ensemble du corps :
-L'huile d'argan est un produit biologique qui va agir efficacement sur votre peau, vos cheveux et vos ongles. L'utilisation r&#233;gulière de l'huile d'argan va nourrir votre peau pour la revitaliser et pr&#233;server son &#233;lasticit&#233;, elle va att&#233;nuer les marques caus&#233;es par les boutons ou l'acn&#233; mais va aussi agir sur les brûlures et les gerçures. L'huile d'argan va &#233;galement redonner force et brillance à vos cheveux et va renforcer les ongles fragiles.
-</p>
-<p>
-Le savon noir, un puissant exfoliant naturel :
-Les savons propos&#233;s par Art du Maroc sont des exfoliants v&#233;g&#233;taux qui vont agir en profondeur en enlevant les peaux mortes et en &#233;liminant les toxines pr&#233;sentes sur votre peau. Cela va permettre une meilleure respiration et une meilleure r&#233;g&#233;n&#233;ration des cellules pour une peau belle et douce.
-</p>
-<p>
-Soin complet de haute qualit&#233; :
-Art du Maroc vous propose aussi d'autres produits cosm&#233;tiques de qualit&#233; afin de compl&#233;ter le soin apport&#233; à votre corps. Vous disposez ainsi d'huiles de massage, d'huiles essentielles, de savons d'Alep et de bien d'autres produits de qualit&#233; que vous d&#233;couvrirez sur notre site.
-</p>
-    </ui:define>
+	<ui:define name="body">
+		<h3 style="text-align: center; font-weight: bold">Huile d'argan
+			et savon noir, bienvenue chez votre spécialiste.</h3>
+
+		<p style="text-align: center;">
+			<img
+				src="#{facesContext.externalContext.requestContextPath}/images/arganier_accueil.png"
+				alt="arganier_accueil.png" style="margin: 5px;"
+				title="arganier_accueil.png" width="415" height="130" />
+		</p>
+
+		<h3 style="font-weight: bold">Secret de janna, spécialiste de
+			l’huile d’argan et du savon noir :</h3>
+
+		<p>Spécialiste de la vente d’huiles d’argan et de savons noirs,
+			Art du Maroc vous propose des produits de beauté et de bien être
+			sains et entièrement naturels conçus dans le respect des traditions
+			dont les bienfaits sont reconnus depuis des siècles.</p>
+
+		<h3 style="font-weight: bold">L’huile d’argan, un produit naturel
+			pour l’ensemble du corps :</h3>
+
+		<p>L’huile d’argan est un produit biologique qui va agir
+			efficacement sur votre peau, vos cheveux et vos ongles. L’utilisation
+			régulière de l’huile d’argan va nourrir votre peau pour la
+			revitaliser et préserver son élasticité, elle va atténuer les marques
+			causées par les boutons ou l’acné mais va aussi agir sur les brûlures
+			et les gerçures. L’huile d’argan va également redonner force et
+			brillance à vos cheveux et va renforcer les ongles fragiles.</p>
+
+		<h3 style="font-weight: bold">Le savon noir, un puissant
+			exfoliant naturel :</h3>
+
+		<p>Les savons proposés par Art du Maroc sont des exfoliants
+			végétaux qui vont agir en profondeur en enlevant les peaux mortes et
+			en éliminant les toxines présentes sur votre peau. Cela va permettre
+			une meilleure respiration et une meilleure régénération des cellules
+			pour une peau belle et douce.</p>
+
+		<h3 style="font-weight: bold">Soin complet de haute qualité :</h3>
+
+Secret de janna vous propose aussi d’autres produits cosmétiques de qualité afin de compléter le soin apporté à votre corps. Vous disposez ainsi d’huiles de massage, d’huiles essentielles, de savons d’Alep et de bien d’autres produits de qualité que vous découvrirez sur notre site.
+
+				
+	</ui:define>
 </ui:composition>
 
 </html>

@@ -32,12 +32,12 @@ public class SkinBean implements Serializable {
     public void initialize() {
         skins = new ArrayList<String>();
         skins.add("blueSky");
-        skins.add("classic");
-        skins.add("deepMarine");
-        skins.add("emeraldTown");
-        skins.add("japanCherry");
-        skins.add("ruby");
-        skins.add("wine");
+        skins.add("test");
+        skins.add("test");
+        skins.add("test");
+        skins.add("test");
+        skins.add("test");
+        skins.add("test");
     }
 
     // TODO: move to utility class. used in navigator also.
