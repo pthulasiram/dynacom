@@ -5,6 +5,17 @@
 	version="1.0">
 
 	<persistence-unit name="application" transaction-type="RESOURCE_LOCAL">
+		<class>com.dynacom.app.domain.model.Address</class>
+		<class>com.dynacom.app.domain.model.Bill</class>
+		<class>com.dynacom.app.domain.model.Category</class>
+		<class>com.dynacom.app.domain.model.Comment</class>
+		<class>com.dynacom.app.domain.model.Contact</class>
+		<class>com.dynacom.app.domain.model.Keyword</class>
+		<class>com.dynacom.app.domain.model.Photo</class>
+		<class>com.dynacom.app.domain.model.Product</class>
+		<class>com.dynacom.app.domain.model.LineItem</class>
+		<class>com.dynacom.app.domain.model.PurchaseOrder</class>
+		<class>com.dynacom.app.domain.model.Signon</class>
 		<!-- <class>com.dynacom.app.Order</class>
 		<class>com.dynacom.app.LineItem</class>
 		<class>com.dynacom.app.Product</class>

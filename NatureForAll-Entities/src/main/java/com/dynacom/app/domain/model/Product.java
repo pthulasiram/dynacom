@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -33,12 +34,11 @@ public class Product {
 	private Category category;
 	
 	@OneToMany
-	@JoinColumn(name="PHOTO_ID")
-	private Collection<Photo> photos = new LinkedHashSet<Photo>();
-	
-	@OneToMany
 	@JoinColumn(name="COMMENT_ID")
 	private Collection<Comment> comments = new LinkedHashSet<Comment>();
+
+	@ManyToMany
+	private Collection<Keyword> keyword;
 
 	/**
 	 * @return the id
@@ -111,20 +111,6 @@ public class Product {
 	}
 
 	/**
-	 * @return the photos
-	 */
-	public Collection<Photo> getPhotos() {
-		return photos;
-	}
-
-	/**
-	 * @param photos the photos to set
-	 */
-	public void setPhotos(Collection<Photo> photos) {
-		this.photos = photos;
-	}
-
-	/**
 	 * @return the comments
 	 */
 	public Collection<Comment> getComments() {
@@ -164,5 +150,13 @@ public class Product {
 	 */
 	public void setCategory(Category category) {
 		this.category = category;
+	}
+
+	public Collection<Keyword> getKeyword() {
+	    return keyword;
+	}
+
+	public void setKeyword(Collection<Keyword> param) {
+	    this.keyword = param;
 	}
 }

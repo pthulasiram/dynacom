@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import com.dynacom.app.domain.model.Photo;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Photo {
@@ -17,7 +19,10 @@ public class Photo {
 	
 	@ManyToOne
 	private Product product;
-	
+	@OneToOne
+	private Photo photo;
+	@OneToOne(mappedBy = "photo")
+	private Photo photoBig;
 	/**
 	 * @return the id
 	 */
@@ -77,5 +82,17 @@ public class Photo {
 	 */
 	public void setProduct(Product product) {
 		this.product = product;
+	}
+	public Photo getPhoto() {
+	    return photo;
+	}
+	public void setPhoto(Photo param) {
+	    this.photo = param;
+	}
+	public Photo getPhotoBig() {
+	    return photoBig;
+	}
+	public void setPhotoBig(Photo param) {
+	    this.photoBig = param;
 	}
 }

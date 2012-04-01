@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Basic;
 
 /**
  * An order.
@@ -24,18 +25,21 @@ public class PurchaseOrder {
 	private Long id;
 
 	@ManyToOne
-	@JoinColumn(name="customer")
+	@JoinColumn(name = "customer")
 	private Contact customer;
-	
+
 	@ManyToOne
-	@JoinColumn(name="delivery")
+	@JoinColumn(name = "delivery")
 	private Contact delivery;
-	
+
 	private Date poDate = new Date();
 
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL)
 	private Collection<LineItem> lineItems = new LinkedHashSet<LineItem>();
-	
+
+	@Basic
+	private Boolean billed;
+
 	/**
 	 * @return the customer
 	 */
@@ -104,10 +108,19 @@ public class PurchaseOrder {
 	}
 
 	/**
-	 * @param delivery the delivery to set
+	 * @param delivery
+	 *            the delivery to set
 	 */
 	public void setDelivery(Contact delivery) {
 		this.delivery = delivery;
+	}
+
+	public Boolean getBilled() {
+		return billed;
+	}
+
+	public void setBilled(Boolean billed) {
+		this.billed = billed;
 	}
 
 }

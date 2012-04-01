@@ -88,4 +88,9 @@
 			<value>com.dynacom.app.domain.model.PurchaseOrder</value>
 		</constructor-arg>
 	</bean>
+	<bean id="signonDao" class="com.dynacom.app.domain.dao.GenericDAOImpl">
+		<constructor-arg>
+			<value>com.dynacom.app.domain.model.Signon</value>
+		</constructor-arg>
+	</bean>
 </beans>

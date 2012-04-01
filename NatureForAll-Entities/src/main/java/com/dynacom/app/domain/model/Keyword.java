@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import com.dynacom.app.domain.model.Product;
+import java.util.Collection;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Keyword {
@@ -12,6 +15,9 @@ public class Keyword {
 	private Long id;
 	
 	private String key;
+
+	@ManyToMany(mappedBy = "keyword")
+	private Collection<Product> product;
 
 	/**
 	 * @return the key
@@ -39,5 +45,13 @@ public class Keyword {
 	 */
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public Collection<Product> getProduct() {
+	    return product;
+	}
+
+	public void setProduct(Collection<Product> param) {
+	    this.product = param;
 	}
 }
