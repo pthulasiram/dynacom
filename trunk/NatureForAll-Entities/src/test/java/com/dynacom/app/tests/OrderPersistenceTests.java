@@ -18,6 +18,7 @@ import com.dynacom.app.domain.model.Contact;
 import com.dynacom.app.domain.model.LineItem;
 import com.dynacom.app.domain.model.PurchaseOrder;
 import com.dynacom.app.domain.model.Product;
+import com.dynacom.app.domain.model.Signon;
 
 @ContextConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -35,13 +36,26 @@ public class OrderPersistenceTests {
 	GenericDAO<Product, Long> productDao;
 	@Autowired
 	GenericDAO<Category, Long> categoryDao;
+	@Autowired
+	GenericDAO<Signon, String> signonDao;
 	
 	@Test
 	@Transactional
 	public void testContact() throws Exception {
+	
+		Signon signon = new Signon();
+		signon.setUserId("JOHN@GMAIL.COM");
+		signon.setPassword("PASS");
+		
+		signonDao.persist(signon);
+		
 		Contact contact = createContact();
 		
+		contact.setSignon(signon);
+		
 		contactDao.persist(contact);
+		
+		
 		
 		contactDao.flush();
 		contactDao.clear();
@@ -89,6 +103,7 @@ public class OrderPersistenceTests {
 	}
 
 	private Contact createContact() {
+		
 		Contact contact = new Contact();
 		contact.setCivility("MR");
 		contact.setFirstName("John");
