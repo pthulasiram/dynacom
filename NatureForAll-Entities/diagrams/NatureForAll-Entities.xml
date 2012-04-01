@@ -14,7 +14,7 @@
 		<entity-name>com.dynacom.app.domain.model.Comment</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>146</entity-height>
-		<entity-X-Coordinate>466</entity-X-Coordinate>
+		<entity-X-Coordinate>501</entity-X-Coordinate>
 		<entity-Y-Coordinate>530</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
@@ -25,7 +25,7 @@
 		<entity-name>com.dynacom.app.domain.model.Signon</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>186</entity-height>
-		<entity-X-Coordinate>466</entity-X-Coordinate>
+		<entity-X-Coordinate>501</entity-X-Coordinate>
 		<entity-Y-Coordinate>135</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
@@ -69,7 +69,7 @@
 		<entity-name>com.dynacom.app.domain.model.Address</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>286</entity-height>
-		<entity-X-Coordinate>53</entity-X-Coordinate>
+		<entity-X-Coordinate>20</entity-X-Coordinate>
 		<entity-Y-Coordinate>85</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
