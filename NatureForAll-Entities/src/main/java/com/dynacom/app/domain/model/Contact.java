@@ -13,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 
 @Entity
 public class Contact {
@@ -27,12 +28,13 @@ public class Contact {
 	private String mail;
 	@Column(nullable = false)
 	private String civility;
+	@Transient
+	private String confirmMail;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
 
 	@OneToMany(mappedBy = "customer")
-	// @JoinColumn(name="BILL_ID")
 	private Collection<PurchaseOrder> orders = new LinkedHashSet<PurchaseOrder>();
 	
 	@ManyToOne
@@ -156,5 +158,13 @@ public class Contact {
 	 */
 	public void setSignon(Signon signon) {
 		this.signon = signon;
+	}
+
+	public String getConfirmMail() {
+		return confirmMail;
+	}
+
+	public void setConfirmMail(String confirmMail) {
+		this.confirmMail = confirmMail;
 	}
 }

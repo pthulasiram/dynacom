@@ -19,6 +19,7 @@ import com.dynacom.app.domain.model.LineItem;
 import com.dynacom.app.domain.model.PurchaseOrder;
 import com.dynacom.app.domain.model.Product;
 import com.dynacom.app.domain.model.Signon;
+import com.dynacom.app.domain.services.IContactService;
 
 @ContextConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -66,6 +67,7 @@ public class OrderPersistenceTests {
 		
 		assertNotNull(other.getAddress());
 		assertEquals(other, other.getAddress().getContact());
+		assertNotNull(signon.getContacts());
 	}
 	
 	@Test
@@ -80,6 +82,7 @@ public class OrderPersistenceTests {
 		fish.setOwner(food);
 		Product product = new Product();
 		product.setLabel("foo");
+		product.setPrice(15.95D);
 		
 		product.setCategory(fish);
 		
@@ -157,6 +160,7 @@ public class OrderPersistenceTests {
 	@Transactional
 	public void testCreateProduct() throws Exception {
 		Product product = new Product();
+		product.setLabel("foo");
 		product.setPrice(new Double(1.25));
 		productDao.persist(product);
 		productDao.flush();

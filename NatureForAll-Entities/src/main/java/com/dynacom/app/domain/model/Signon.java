@@ -7,6 +7,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
+
 import com.dynacom.app.domain.model.Comment;
 import javax.persistence.JoinColumn;
 
@@ -17,6 +19,9 @@ public class Signon {
 	@Column(nullable = false)
 	private String password;
 	
+	@Transient
+	private String confirmPassword;
+	
 	@OneToMany(mappedBy="signon")
 	private Collection<Contact> contacts = new LinkedHashSet<Contact>();
 	@OneToMany
@@ -24,6 +29,7 @@ public class Signon {
 	private Collection<Comment> comment;
 	
 	private Boolean admin;
+	private Boolean active;
 
 	/**
 	 * @return the userId
@@ -89,5 +95,21 @@ public class Signon {
 	 */
 	public void setAdmin(Boolean admin) {
 		this.admin = admin;
+	}
+
+	public Boolean getActive() {
+		return active;
+	}
+
+	public void setActive(Boolean active) {
+		this.active = active;
+	}
+
+	public String getConfirmPassword() {
+		return confirmPassword;
+	}
+
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
 	}
 }
