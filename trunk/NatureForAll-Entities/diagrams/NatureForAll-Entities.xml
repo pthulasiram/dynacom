@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><entities>
 	<entity>
+		<entity-name>com.dynacom.app.domain.model.Category</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>186</entity-height>
+		<entity-X-Coordinate>922</entity-X-Coordinate>
+		<entity-Y-Coordinate>444</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
 		<entity-name>com.dynacom.app.domain.model.Photo</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>226</entity-height>
 		<entity-X-Coordinate>922</entity-X-Coordinate>
-		<entity-Y-Coordinate>140</entity-Y-Coordinate>
+		<entity-Y-Coordinate>135</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -24,9 +35,9 @@
 	<entity>
 		<entity-name>com.dynacom.app.domain.model.Signon</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>186</entity-height>
+		<entity-height>226</entity-height>
 		<entity-X-Coordinate>501</entity-X-Coordinate>
-		<entity-Y-Coordinate>135</entity-Y-Coordinate>
+		<entity-Y-Coordinate>127</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -46,7 +57,7 @@
 	<entity>
 		<entity-name>com.dynacom.app.domain.model.Contact</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>246</entity-height>
+		<entity-height>266</entity-height>
 		<entity-X-Coordinate>270</entity-X-Coordinate>
 		<entity-Y-Coordinate>105</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
@@ -69,8 +80,8 @@
 		<entity-name>com.dynacom.app.domain.model.Address</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>286</entity-height>
-		<entity-X-Coordinate>20</entity-X-Coordinate>
-		<entity-Y-Coordinate>85</entity-Y-Coordinate>
+		<entity-X-Coordinate>36</entity-X-Coordinate>
+		<entity-Y-Coordinate>97</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -79,9 +90,9 @@
 	<entity>
 		<entity-name>com.dynacom.app.domain.model.Product</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>266</entity-height>
+		<entity-height>286</entity-height>
 		<entity-X-Coordinate>690</entity-X-Coordinate>
-		<entity-Y-Coordinate>118</entity-Y-Coordinate>
+		<entity-Y-Coordinate>107</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -93,17 +104,6 @@
 		<entity-height>168</entity-height>
 		<entity-X-Coordinate>53</entity-X-Coordinate>
 		<entity-Y-Coordinate>519</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>com.dynacom.app.domain.model.Category</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>186</entity-height>
-		<entity-X-Coordinate>922</entity-X-Coordinate>
-		<entity-Y-Coordinate>444</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>

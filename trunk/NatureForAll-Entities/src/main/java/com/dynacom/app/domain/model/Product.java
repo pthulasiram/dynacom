@@ -1,9 +1,11 @@
 package com.dynacom.app.domain.model;
 
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.LinkedHashSet;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,21 +14,23 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import com.dynacom.app.domain.model.Photo;
 
 @Entity
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-
+	@Column(nullable = false)	
 	private String label;
 
 	private String description;
 
-	private Date created;
+	private Date created = Calendar.getInstance().getTime();
 
 	private Date modified;
 	
+	@Column(nullable = false)
 	private Double price;
 	
 	@ManyToOne
@@ -39,6 +43,8 @@ public class Product {
 
 	@ManyToMany
 	private Collection<Keyword> keyword;
+	@OneToMany(mappedBy = "product")
+	private Collection<Photo> photo = new LinkedHashSet<Photo>();
 
 	/**
 	 * @return the id
@@ -158,5 +164,13 @@ public class Product {
 
 	public void setKeyword(Collection<Keyword> param) {
 	    this.keyword = param;
+	}
+
+	public Collection<Photo> getPhoto() {
+	    return photo;
+	}
+
+	public void setPhoto(Collection<Photo> param) {
+	    this.photo = param;
 	}
 }

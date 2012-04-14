@@ -93,4 +93,7 @@
 			<value>com.dynacom.app.domain.model.Signon</value>
 		</constructor-arg>
 	</bean>
+	
+	<bean id="signonService" class="com.dynacom.app.domain.services.impl.SignonService"/>
+	<bean id="contactService" class="com.dynacom.app.domain.services.impl.ContactService"/>
 </beans>
